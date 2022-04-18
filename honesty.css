@@ -1,0 +1,27 @@
+.honesty-main {
+    height: 700px;
+}
+
+.content-honesty {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.2em;
+    width: 500px;
+    border: 2px solid #195190FF;
+    border-radius: 4px;
+    height: 500px;
+    padding: 30px;
+    margin: auto;
+}
+
+.content-honesty p {
+    padding-bottom: 20px;
+}
+
+.content {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}

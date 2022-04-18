@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - Jason Lee</title>
+    <script src="https://kit.fontawesome.com/16ecdfa4c3.js" crossorigin="anonymous"></script> <!-- Font Awesome Logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <header>                                    
+        <div class="logo">
+            <i class="fa fa-cube"></i>
+            <h1>LEE Products</h1>
+        </div>
+        <nav>
+            <ol>
+                <li><a href="honesty.html">Honesty</a></li>
+                <li><a href="#" class="current">Product</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+            </ol>
+        </nav>
+    </header>
+    <main class="product-main">
+        
+        <div class="form-container">
+            <h3>Sign Up Now!</h3>                  
+            <form action="https://httpbin.org/post" method="post" id="signup" name="signup"> <!-- start form -->
+                <input type="hidden" name="lastName" id="lastName" value="Lee">                     <!-- hidden value -->
+                <input type="hidden" name="studentID" id="studentId" value="106186216">             <!-- hidden value -->
+                <div>                                                                               <!-- product id -->
+                    <label for="productId">Product ID</label>
+                    <input type="text" pattern="^\d{8}$" name="productId" id="productId" placeholder="Enter the Product ID" oninvalid="this.setCustomValidity('Must be 8 digits')"
+                    oninput="this.setCustomValidity('')" required> 
+                </div>
+                <div>                                                                                  <!-- product description -->
+                    <label for="productDescp">Product Description</label>
+                    <textarea  name="productDescp" id="productDescp" minlength="20" required></textarea>
+                </div>
+                <div>                                                                                  <!-- price -->
+                    <label for="price">Price</label>
+                    <input type="text" pattern="^[$]\d{1,3}$" name="price" id="price" value="$" oninvalid="this.setCustomValidity('Price must be less than $1000')"
+                    oninput="this.setCustomValidity('')" required>
+                </div>
+                <div>                                                                                   <!-- username -->
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Enter your username" required>
+                </div>
+                <p class="status">Supplier Status:</p>
+                <div class="checkbox-container">                                                    <!-- supplier status checkbox -->
+                    <div>
+                        <label for="newSupplier" class="checkbox">New Supplier</label>
+                        <input type="checkbox" name="supplierStatus" id="newSupplier" >
+                    </div>
+                    <div> 
+                        <label for="contractSigned" class="checkbox">Contract Signed</label>
+                        <input type="checkbox" name="supplierStatus" id="contractSigned" >
+                    </div>
+                    <div>
+                        <label for="qualityTested" class="checkbox">Quality Tested</label>
+                        <input type="checkbox" name="supplierStatus" id="qualityTested" >
+                    </div>
+                </div>
+                <div>                                                                           <!-- email -->
+                    <label for="email">Supplier Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="button-container">                                              <!-- submit/reset buttons -->
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                </div>
+                
+            </form>
+        </div>
+        <div class="errors" id="errors">                                                    <!-- error messages -->
+        </div>
+    </main>
+    <footer>
+        <p>GitHub - <a href="#">link</a></p>
+        <p>&#169; Jason Lee 2022</p>
+    </footer>
+    <script src="product.js"></script>
+</body>
+</html>
